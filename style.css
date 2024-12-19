@@ -1,0 +1,144 @@
+:root {
+    --slate-1: #fcfcfd;
+    --slate-2: #f9f9fb;
+    --slate-3: #f0f0f3;
+    --slate-4: #e8e8ec;
+    --slate-5: #e0e1e6;
+    --slate-6: #d9d9e0;
+    --slate-7: #cdced6;
+    --slate-8: #b9bbc6;
+    --slate-9: #8b8d98;
+    --slate-10: #80838d;
+    --slate-11: #60646c;
+    --slate-12: #1c2024;
+
+    --blue-1: #fbfdff;
+    --blue-2: #f4faff;
+    --blue-3: #e6f4fe;
+    --blue-4: #d5efff;
+    --blue-5: #c2e5ff;
+    --blue-6: #acd8fc;
+    --blue-7: #8ec8f6;
+    --blue-8: #5eb1ef;
+    --blue-9: #0090ff;
+    --blue-10: #0588f0;
+    --blue-11: #0d74ce;
+    --blue-12: #113264;
+}
+
+* {
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+main {
+    width: 100%;
+}
+
+main>header {
+    background-image: url("./imgs/background_unibra.png");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 96px;
+    gap: 16px;
+    border: 1px solid var(--blue-12);
+
+    & img {
+        width: 160px;
+    }
+
+    & .header-content {
+        background-color: white;
+        padding: 16px;
+        width: 100%;
+        max-width: 768px;
+        border-radius: 8px;
+        color: var(--blue-12);
+        box-shadow: 4px 4px 16px var(--slate-6);
+        border: 1px solid var(--slate-6);
+
+        & h6 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        & p {
+            color: var(--slate-12);
+        }
+    }
+}
+
+.main-content {
+    padding: 0px 96px 96px;
+
+    & h6 {
+        font-size: 24px;
+        color: var(--blue-12);
+        text-align: center;
+        padding: 4px 16px;
+        border-radius: 999px;
+        background-color: white;
+        margin-top: -16px;
+        width: fit-content;
+        margin-inline: auto;
+        margin-bottom: 40px;
+    }
+
+    & section {
+        width: 100%;
+        max-width: 768px;
+        display: flex;
+        gap: 24px;
+        margin-inline: auto;
+    }
+
+    & section:first-of-type {
+        margin-bottom: 40px;
+    }
+
+    .card {
+        flex: 1;
+        box-shadow: 4px 4px 16px var(--slate-6);
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid var(--slate-6);
+
+        & header {
+            background-color: var(--blue-12);
+            color: white;
+            text-align: center;
+            padding: 16px;
+        }
+
+        & .card-body {
+            padding: 16px;
+            gap: 8px;
+            display: flex;
+
+            & .card-body-item {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            & .img-container {
+                flex: 1;
+                aspect-ratio: 1/1;
+                position: relative;
+                border-radius: 8px;
+                overflow: hidden;
+
+                & img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        & .card-body.vertical {
+            flex-direction: column;
+        }
+    }
+}
